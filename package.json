@@ -1,17 +1,20 @@
 {
-  "name": "my-astro-site",
-  "type": "module",
+  "name": "second-star",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.2.1",
-    "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.3.0",
-    "astro": "^5.5.3"
+    "@astrojs/mdx": "^4.2.0",
+    "@astrojs/svelte": "^7.0.6",
+    "astro": "^5.5.2",
+    "reading-time": "^1.5.0",
+    "rehype-external-links": "^3.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-smartypants": "^2.0.0"
   }
 }

@@ -2,30 +2,82 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const title = 'Weihang Gao';
-const description = 'Introduce myself';
+const description = 'AI Engineer | Data Scientist | WiFi Sensing & LLM';
 const permalink = Astro.site.href;
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink}>
   <div class="home-container">
+    <!-- 左侧介绍 -->
     <div class="home-copy">
-      <h1>Welcome to your new Astro Blog</h1>
-      <p>Check out the docs on <a href="https://www.github.com/Charca/astro-blog-template" target="_blank" rel="noopener">GitHub</a> to get started.</p>
+      <h1>👋 Hi, I'm Weihang Gao</h1>
+      <p>
+        AI Engineer & Data Scientist, specializing in <b>LLMs, Deep Learning, and WiFi Sensing</b>.
+      </p>
+      <p>
+        I develop scalable machine learning pipelines, explore <b>foundation models</b>, 
+        and apply AI to <b>real-world sensing applications</b>.
+      </p>
+      <div class="cta-buttons">
+        <a class="btn-primary" href="/about">About Me</a>
+        <a class="btn-secondary" href="/projects">View Projects</a>
+      </div>
     </div>
 
+    <!-- 右侧图片 -->
     <div class="hero-image-container">
       <picture>
-        <source srcset="/assets/home-illustration.webp" media="(min-width: 600px)">
-        <img class="hero-image" alt="Illustration of person reading a book" src="/assets/home-illustration-small.webp" width="550" height="466">
+        <source srcset="/assets/homepage_by_openart.jpg" media="(min-width: 600px)">
+        <img class="hero-image" alt="AI and Data Science Concept Illustration" src="/assets/ai-data-science-small.webp" width="550" height="466">
       </picture>
       <p class="caption">
         Illustration by
-        <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" target="_blank" rel="noopener">Icons 8</a>
-        from
-        <a href="https://icons8.com/illustrations" target="_blank" rel="noopener">Ouch!</a>
+        <a href="https://openart.ai/home" target="_blank" rel="noopener">OpenArt</a>
       </p>
     </div>
   </div>
+
+  <!-- 特色内容区 -->
+  <section class="skills-section">
+    <h2>🚀 Key Skills & Expertise</h2>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <h3>💡 Large Language Models (LLMs)</h3>
+        <p>Fine-tuning, prompt engineering, and application development using GPT models.</p>
+      </div>
+      <div class="skill-item">
+        <h3>📡 WiFi Sensing & AI</h3>
+        <p>Developed foundation models for human activity classification using WiFi signals.</p>
+      </div>
+      <div class="skill-item">
+        <h3>🔬 Machine Learning Pipelines</h3>
+        <p>Built end-to-end ML pipelines using AWS SageMaker, PyTorch, and Scikit-learn.</p>
+      </div>
+      <div class="skill-item">
+        <h3>☁️ Cloud & Model Deployment</h3>
+        <p>Deploying AI models with AWS, Docker, and GitHub Actions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="projects-section">
+    <h2>🛠 Featured Projects</h2>
+    <ul>
+      <li><a href="/projects/wifi-foundation-model">WiFi Foundation Model</a> - Transformer-based model for motion detection</li>
+      <li><a href="/projects/llm-chatbot">LLM-powered Chatbot</a> - Fine-tuned GPT chatbot for research papers</li>
+      <li><a href="/visualization">AI Model Training Visualization</a> - Interactive Highcharts for ML insights</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact-section">
+    <h2>📬 Contact</h2>
+    <p>Email: <a href="mailto:weihanggao99@gmail.com">weihanggao99@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/your-username">your-username</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/your-username">your-username</a></p>
+  </section>
+
 </BaseLayout>
 
 <style>
@@ -53,6 +105,30 @@ const permalink = Astro.site.href;
     font-size: 1.4em;
   }
 
+  .cta-buttons {
+    margin-top: 1em;
+  }
+
+  .btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+  }
+
+  .btn-secondary {
+    background-color: #f8f9fa;
+    color: #007bff;
+    border: 1px solid #007bff;
+  }
+
   .hero-image-container {
     margin: 0 1em;
     text-align: center;
@@ -73,27 +149,29 @@ const permalink = Astro.site.href;
     width: 100%;
     max-width: 550px;
     margin-bottom: 1em;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
 
-  @media (max-width: 1200px) {
-    p {
-      font-size: 1.2em;
-    }
-
-    .hero-image {
-      max-width: 400px;
-    }
+  .skills-section {
+    margin-top: 4em;
+    padding: 2em;
+    background: #f9f9f9;
   }
 
-  @media (max-width: 800px) {
-    .home-container {
-      flex-direction: column;
-    }
-
-    .home-copy {
-      flex: 0;
-      padding-bottom: 2em;
-      text-align: center;
-    }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
   }
-</style>
+
+  .skill-item {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .projects-section {
+    margin-top: 4em;
+    padding: 

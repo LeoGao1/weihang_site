@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const title = 'Weihang Gao';
-const description = 'AI Engineer | Data Scientist | WiFi Sensing & LLM';
+const description = 'AI Engineer | Machine Learning | LLM Development | Data Science';
 const permalink = Astro.site.href;
 ---
 
@@ -12,11 +12,12 @@ const permalink = Astro.site.href;
     <div class="home-copy">
       <h1>👋 Hi, I'm Weihang Gao</h1>
       <p>
-        AI Engineer & Data Scientist, specializing in <b>LLMs, Deep Learning, and WiFi Sensing</b>.
+        AI Engineer & Data Scientist specializing in 
+        <b>Machine Learning, LLM Development, and Data Engineering</b>.
       </p>
       <p>
-        I develop scalable machine learning pipelines, explore <b>foundation models</b>, 
-        and apply AI to <b>real-world sensing applications</b>.
+        I design and deploy <b>scalable ML pipelines</b>, fine-tune <b>Large Language Models</b>,
+        and extract actionable insights from complex datasets.
       </p>
       <div class="cta-buttons">
         <a class="btn-primary" href="/about">About Me</a>
@@ -28,34 +29,34 @@ const permalink = Astro.site.href;
     <div class="hero-image-container">
       <picture>
         <source srcset="/assets/homepage_by_openart.jpg" media="(min-width: 600px)">
-        <img class="hero-image" alt="AI and Data Science Concept Illustration" src="/assets/ai-data-science-small.webp" width="550" height="466">
+        <img class="hero-image" alt="AI and Machine Learning Development" src="/assets/homepage_by_openart.jpg" width="550" height="466">
       </picture>
       <p class="caption">
         Illustration by
-        <a href="https://openart.ai/home" target="_blank" rel="noopener">OpenArt</a>
+        <a href="https://www.openart.ai/" target="_blank" rel="noopener">OpenArt</a>
       </p>
     </div>
   </div>
 
-  <!-- 特色内容区 -->
+  <!-- 特色技能区 -->
   <section class="skills-section">
-    <h2>🚀 Key Skills & Expertise</h2>
+    <h2>🚀 Key Expertise</h2>
     <div class="skills-grid">
       <div class="skill-item">
-        <h3>💡 Large Language Models (LLMs)</h3>
-        <p>Fine-tuning, prompt engineering, and application development using GPT models.</p>
+        <h3>💡 Machine Learning & Deep Learning</h3>
+        <p>Designing scalable ML models using PyTorch, TensorFlow, and Scikit-learn.</p>
       </div>
       <div class="skill-item">
-        <h3>📡 WiFi Sensing & AI</h3>
-        <p>Developed foundation models for human activity classification using WiFi signals.</p>
+        <h3>🤖 Large Language Models (LLMs)</h3>
+        <p>Fine-tuning, deploying, and optimizing LLMs using AWS SageMaker & custom pipelines.</p>
       </div>
       <div class="skill-item">
-        <h3>🔬 Machine Learning Pipelines</h3>
-        <p>Built end-to-end ML pipelines using AWS SageMaker, PyTorch, and Scikit-learn.</p>
+        <h3>📊 AI Infrastructure & Data Engineering</h3>
+        <p>Building data pipelines, feature engineering, and model monitoring with AWS/GCP.</p>
       </div>
       <div class="skill-item">
-        <h3>☁️ Cloud & Model Deployment</h3>
-        <p>Deploying AI models with AWS, Docker, and GitHub Actions.</p>
+        <h3>☁️ Model Deployment & Optimization</h3>
+        <p>Deploying AI models using Docker, Kubernetes, and cloud platforms.</p>
       </div>
     </div>
   </section>
@@ -64,9 +65,24 @@ const permalink = Astro.site.href;
   <section class="projects-section">
     <h2>🛠 Featured Projects</h2>
     <ul>
-      <li><a href="/projects/wifi-foundation-model">WiFi Foundation Model</a> - Transformer-based model for motion detection</li>
-      <li><a href="/projects/llm-chatbot">LLM-powered Chatbot</a> - Fine-tuned GPT chatbot for research papers</li>
-      <li><a href="/visualization">AI Model Training Visualization</a> - Interactive Highcharts for ML insights</li>
+      <li><a href="/projects/llm-fine-tuning">LLM Fine-Tuning on AWS SageMaker</a> - Training and optimizing GPT models</li>
+      <li><a href="/projects/ml-pipeline">End-to-End ML Pipeline</a> - Scalable data processing & model training</li>
+      <li><a href="/visualization">Advanced AI Model Visualization</a> - Interactive charts & analytics</li>
+    </ul>
+  </section>
+
+  <!-- Publications -->
+  <section class="publications-section">
+    <h2>📄 Selected Publications</h2>
+    <ul>
+      <li>
+        <b>WiFi-based Robust Human and Non-Human Motion Recognition</b>, IEEE 2024  
+        <a href="https://scholar.google.com/citations?hl=en&user=LJJDlb0AAAAJ" target="_blank">Read More</a>
+      </li>
+      <li>
+        <b>SrcSense: Robust WiFi-based Motion Source Recognition</b>, IEEE Journal 2024  
+        <a href="https://scholar.google.com/citations?hl=en&user=LJJDlb0AAAAJ" target="_blank">Read More</a>
+      </li>
     </ul>
   </section>
 
@@ -153,7 +169,7 @@ const permalink = Astro.site.href;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
 
-  .skills-section {
+  .skills-section, .projects-section, .publications-section, .contact-section {
     margin-top: 4em;
     padding: 2em;
     background: #f9f9f9;
@@ -172,6 +188,29 @@ const permalink = Astro.site.href;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  .projects-section {
-    margin-top: 4em;
-    padding: 
+  @media (max-width: 1200px) {
+    p {
+      font-size: 1.2em;
+    }
+
+    .hero-image {
+      max-width: 400px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .home-container {
+      flex-direction: column;
+    }
+
+    .home-copy {
+      flex: 0;
+      padding-bottom: 2em;
+      text-align: center;
+    }
+
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

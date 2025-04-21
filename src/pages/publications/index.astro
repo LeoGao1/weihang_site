@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Publications";
+const description = "Selected research publications by Weihang Gao.";
+const permalink = "/publications/";
+const current = "publications";
+---
+
+<BaseLayout title={title} description={description} permalink={permalink} current={current}>
+  <h1 class="page-title">Selected Publications</h1>
+
+  <section class="pub-list">
+    <div class="pub-item">
+      <h3>WiFi-based Robust Human and Non-Human Motion Recognition</h3>
+      <p>
+        G Zhu, B Wang, <b>W Gao</b>, Y Hu, C Wu, KJR Liu. 
+        <i>IEEE PerCom Workshops</i>, 2024.
+        <a href="https://ieeexplore.ieee.org/abstract/document/10502413" target="_blank">[Link]</a>
+      </p>
+    </div>
+
+    <div class="pub-item">
+      <h3>Method, Apparatus, and System for Wireless Sensing Based on Deep Learning (Patent)</h3>
+      <p>
+        G Zhu, B Wang, <b>W Gao</b>, Y Hu, C Wu, Z Xiaolu, KJR Liu, OCL Au. 
+        <i>US Patent No. 18/401,681</i>, 2024.
+        <a href="https://patents.google.com/patent/US20240175983A1/en" target="_blank">[Link]</a>
+      </p>
+    </div>
+
+    <div class="pub-item">
+      <h3>SrcSense: Robust WiFi-based Motion Source Recognition via Signal-Informed Deep Learning</h3>
+      <p>
+        G Zhu, B Wang, <b>W Gao</b>, Y Hu, C Wu, KJR Liu.
+        <i>IEEE Journal of Selected Areas in Sensors</i>, 2024.
+        <a href="https://ieeexplore.ieee.org/abstract/document/10803907" target="_blank">[Link]</a>
+      </p>
+    </div>
+  </section>
+
+  <div class="scholar-link">
+    <a href="https://scholar.google.com/citations?user=LJJDlb0AAAAJ&hl=en" target="_blank" class="btn-secondary">View on Google Scholar</a>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  .pub-list {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .pub-item {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+
+  .pub-item h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+  }
+
+  .pub-item p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .pub-item a {
+    margin-left: 0.5rem;
+    font-weight: bold;
+    color: var(--primary-color, #007acc);
+    text-decoration: none;
+  }
+
+  .scholar-link {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .btn-secondary {
+    padding: 0.7em 1.4em;
+    border: 2px solid #007acc;
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+  }
+
+  .btn-secondary:hover {
+    background-color: #007acc;
+    color: white;
+  }
+</style>

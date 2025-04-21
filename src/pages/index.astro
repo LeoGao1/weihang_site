@@ -10,7 +10,7 @@ const permalink = Astro.site.href;
   <div class="home-container">
     <!-- 左侧介绍 -->
     <div class="home-copy">
-      <h1>👋 Hi, I'm Weihang Gao</h1>
+      <h1>Hi, I'm Weihang Gao</h1>
       <p>
         AI Engineer & Data Scientist specializing in 
         <b>Machine Learning, LLM Development, and Data Engineering</b>.
@@ -38,179 +38,245 @@ const permalink = Astro.site.href;
     </div>
   </div>
 
-  <!-- 特色技能区 -->
+  <!-- 技能 -->
   <section class="skills-section">
-    <h2>🚀 Key Expertise</h2>
+    <h2 class="section-title">Key Expertise</h2>
     <div class="skills-grid">
       <div class="skill-item">
-        <h3>💡 Machine Learning & Deep Learning</h3>
-        <p>Designing scalable ML models using PyTorch, TensorFlow, and Scikit-learn.</p>
+        <h3>Machine Learning & Deep Learning</h3>
+        <p>
+          Building and training scalable ML/DL models using PyTorch, TensorFlow, and Scikit-learn.
+        </p>
       </div>
       <div class="skill-item">
-        <h3>🤖 Large Language Models (LLMs)</h3>
-        <p>Fine-tuning, deploying, and optimizing LLMs using AWS SageMaker & custom pipelines.</p>
+        <h3>Large Language Models (LLMs)</h3>
+        <p>
+          Fine-tuning, prompting, and deploying LLMs using Hugging Face, self-supervised learning, and AWS SageMaker.
+        </p>
       </div>
       <div class="skill-item">
-        <h3>📊 AI Infrastructure & Data Engineering</h3>
-        <p>Building data pipelines, feature engineering, and model monitoring with AWS/GCP.</p>
+        <h3>Data Engineering & MLOps</h3>
+        <p>
+          Designing efficient data pipelines and integrating ML models into production with AWS and GCP.
+        </p>
       </div>
       <div class="skill-item">
-        <h3>☁️ Model Deployment & Optimization</h3>
-        <p>Deploying AI models using Docker, Kubernetes, and cloud platforms.</p>
+        <h3>Data Analysis & Visualization</h3>
+        <p>
+          Extracting insights from complex datasets using Pandas, NumPy, and visualizing results via Matplotlib, Seaborn, and Highcharts.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Featured Projects -->
+  <!-- 项目预览 -->
   <section class="projects-section">
-    <h2>🛠 Featured Projects</h2>
-    <ul>
-      <li><a href="/projects/llm-fine-tuning">LLM Fine-Tuning on AWS SageMaker</a> - Training and optimizing GPT models</li>
-      <li><a href="/projects/ml-pipeline">End-to-End ML Pipeline</a> - Scalable data processing & model training</li>
-      <li><a href="/visualization">Advanced AI Model Visualization</a> - Interactive charts & analytics</li>
-    </ul>
-  </section>
+    <h2 class="section-title">Featured Projects</h2>
 
-  <!-- Publications -->
-  <section class="publications-section">
-    <h2>📄 Selected Publications</h2>
-    <ul>
-      <li>
-        <b>WiFi-based Robust Human and Non-Human Motion Recognition</b>, IEEE 2024  
-        <a href="https://scholar.google.com/citations?hl=en&user=LJJDlb0AAAAJ" target="_blank">Read More</a>
-      </li>
-      <li>
-        <b>SrcSense: Robust WiFi-based Motion Source Recognition</b>, IEEE Journal 2024  
-        <a href="https://scholar.google.com/citations?hl=en&user=LJJDlb0AAAAJ" target="_blank">Read More</a>
-      </li>
-    </ul>
-  </section>
+    <div class="project-preview-grid">
+      <div class="project-preview-card">
+        <img src="/assets/projects/wifi_foundation.png" alt="Wi-Fi Foundation" />
+        <h3>Wi-Fi Foundation Model Pipeline</h3>
+        <p>
+          End-to-end pipeline on AWS S3 + SageMaker Studio to train domain-specific models using Transformer & SSL techniques.
+        </p>
+        <a href="/projects/#llm">View More →</a>
+      </div>
 
-  <!-- Contact -->
-  <section class="contact-section">
-    <h2>📬 Contact</h2>
-    <p>Email: <a href="mailto:weihanggao99@gmail.com">weihanggao99@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/your-username">your-username</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/your-username">your-username</a></p>
-  </section>
+      <div class="project-preview-card">
+        <img src="/assets/projects/hm3_dl.png" alt="Four-Class Motion Classification" />
+        <h3>Motion Classification (Deep Learning)</h3>
+        <p>
+          Classified human, pets, robot, and fan motion using ViT, ResNet, and Bi-LSTM on Wi-Fi sensing data.
+        </p>
+        <a href="/projects/#ml">View More →</a>
+      </div>
 
+      <div class="project-preview-card">
+        <img src="/assets/projects/aff_name.png" alt="IEEE Affiliation Disambiguation" />
+        <h3>Affiliation Name Disambiguation</h3>
+        <p>
+          Refactored NLP pipeline using BERT and clustering to clean scholarly affiliation names in IEEE datasets.
+        </p>
+        <a href="/projects/#data">View More →</a>
+      </div>
+    </div>
+
+    <div class="projects-footer">
+      <a class="btn-secondary" href="/projects">Explore All Projects</a>
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
-  .home-container {
-    align-items: center;
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    margin: 2em 0;
-    min-height: 400px;
-  }
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3em 0;
+}
 
-  .home-copy {
-    flex: 1;
-    padding: 0 1em;
-  }
+.home-copy {
+  flex: 1 1 500px;
+  padding: 0 1em;
+}
 
-  .home-copy h1 {
-    font-weight: 700;
-    margin-bottom: 0.5em;
-    line-height: 1.3;
-  }
+.home-copy h1 {
+  font-size: 2.6rem;
+  font-family: var(--font-family-serif);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
 
-  .home-copy p {
-    font-size: 1.4em;
-  }
+.home-copy p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
 
-  .cta-buttons {
-    margin-top: 1em;
-  }
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
 
-  .btn-primary, .btn-secondary {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-right: 10px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-  }
+.btn-primary, .btn-secondary {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
 
-  .btn-primary {
-    background-color: #007bff;
-    color: white;
-  }
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
 
-  .btn-secondary {
-    background-color: #f8f9fa;
-    color: #007bff;
-    border: 1px solid #007bff;
-  }
+.btn-secondary {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+}
 
-  .hero-image-container {
-    margin: 0 1em;
-    text-align: center;
-  }
+.btn-primary:hover,
+.btn-secondary:hover {
+  background-color: #005f99;
+  color: white;
+}
 
-  .hero-image-container picture {
-    display: block;
-    min-height: 250px;
-  }
+.hero-image-container {
+  flex: 1 1 400px;
+  text-align: center;
+}
 
-  .caption {
-    font-size: .8em;
-    font-style: italic;
-    text-align: left;
-  }
+.hero-image {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5em;
+}
 
-  .hero-image {
-    width: 100%;
-    max-width: 550px;
-    margin-bottom: 1em;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  }
+.caption {
+  font-size: 0.85rem;
+  font-style: italic;
+  text-align: left;
+  color: #777;
+}
 
-  .skills-section, .projects-section, .publications-section, .contact-section {
-    margin-top: 4em;
-    padding: 2em;
-    background: #f9f9f9;
-  }
+.skills-section, .projects-section {
+  margin-top: 4em;
+  padding: 2em;
+  background: #f9f9f9;
+}
 
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
 
-  .skill-item {
-    background: white;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+.skill-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
 
-  @media (max-width: 1200px) {
-    p {
-      font-size: 1.2em;
-    }
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
 
-    .hero-image {
-      max-width: 400px;
-    }
-  }
+.project-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  @media (max-width: 800px) {
-    .home-container {
-      flex-direction: column;
-    }
+.project-preview-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-    .home-copy {
-      flex: 0;
-      padding-bottom: 2em;
-      text-align: center;
-    }
+.project-preview-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
 
-    .skills-grid {
-      grid-template-columns: 1fr;
-    }
-  }
+.project-preview-card img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 180px;   /* 限制图片高度 */
+  object-fit: cover;   /* 保持比例并裁剪溢出 */
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background-color: #f4f4f4;
+  aspect-ratio: 16/9;
+}
+
+.project-preview-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.project-preview-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.project-preview-card a {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.project-preview-card a:hover {
+  text-decoration: underline;
+}
+
+.projects-footer {
+  text-align: center;
+  margin-top: 3rem;
+}
 </style>

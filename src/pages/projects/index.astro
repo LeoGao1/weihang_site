@@ -1,0 +1,154 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Projects";
+const description = "Selected projects including foundation models, LLM, ML pipelines, and data analysis.";
+const permalink = "/projects/";
+const current = "projects";
+---
+
+
+
+<BaseLayout title={title} description={description} permalink={permalink} current={current}>
+
+
+<h1 class="page-title">Selected Projects</h1>
+
+<!-- Section: LLM & Foundation Models -->
+<section id="llm">
+  <h2 class="section-title">LLMs & Foundation Models</h2>
+
+  <div class="project-card">
+    <img src="/assets/projects/wifi_foundation.png" alt="Wi-Fi Foundation Model" />
+    <div class="content">
+      <h3>Wi-Fi Foundation Model Pipeline</h3>
+      <p>
+        Designed and implemented a large-scale data management pipeline using AWS S3 and SageMaker Studio to support the training of a Wi-Fi domain-specific foundation model.
+        The model uses Transformer architecture and self-supervised learning techniques such as contrastive loss and masking. I led the data ingestion, quality control, versioning,
+        and orchestration of large-scale training jobs. Pipeline refactoring improved reproducibility and reduced training costs.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section: Machine Learning Projects -->
+<section id="ml">
+  <h2 class="section-title">Machine Learning Projects</h2>
+
+  <div class="project-card">
+    <img src="/assets/projects/hm3_dl.png" alt="Four-Class Motion Classification" />
+    <div class="content">
+      <h3>Home Monitoring 3.0 (Deep Learning)</h3>
+      <p>
+        Built a deep learning framework in PyTorch to classify motion types (human, pets, iRobots, fans) using Wi-Fi sensing data.
+        Evaluated architectures including LeNet, ResNet, ViT, RNN, and Bi-LSTM. Leveraged transfer learning for robustness on low-quality sensors.
+        The project contributed to multiple publications and improved classification accuracy by ~20%.
+      </p>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <img src="/assets/projects/hm3_svm.png" alt="SVM Home Monitoring" />
+    <div class="content">
+      <h3>Home Monitoring 3.0 (SVM)</h3>
+      <p>
+        Developed a real-time motion detection and classification engine using SVM on Wi-Fi sensing signals. 
+        Built an end-to-end pipeline for preprocessing, feature engineering, and binary classification.
+        Production deployment achieved a 40% reduction in false alarms and supported deployment on multiple sensor devices.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section: Data Analysis & NLP -->
+<section id="data">
+  <h2 class="section-title">Data Analysis & NLP Projects</h2>
+
+  <div class="project-card">
+    <img src="/assets/projects/aff_name.png" alt="IEEE Affiliation" />
+    <div class="content">
+      <h3>Affiliation Name Disambiguation (IEEE)</h3>
+      <p>
+        Rebuilt a machine learning pipeline for cleaning and clustering author affiliation names from IEEE publications.
+        Applied BERT embeddings and hierarchical clustering to disambiguate affiliation entities with 89% accuracy.
+        Enhanced data preprocessing with multiprocessing and proxy-based crawling, improving runtime by 90%. Tools used include Python, AWS Redshift, and EC2.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .page-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    border-left: 4px solid #007acc;
+  }
+
+  .project-card {
+    display: flex;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    transition: transform 0.2s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .project-card img {
+    width: 260px;
+    height: auto;
+    object-fit: cover;
+    background: #f0f0f0;
+    flex-shrink: 0;
+  }
+
+  .project-card .content {
+    padding: 1.5rem;
+    flex: 1;
+  }
+
+  .project-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .project-card p {
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+    color: #333;
+  }
+
+  @media (max-width: 768px) {
+    .project-card {
+      flex-direction: column;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      padding-left: 0;
+      border-left: none;
+    }
+  }
+</style>
+
+</BaseLayout>

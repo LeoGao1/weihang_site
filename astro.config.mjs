@@ -7,7 +7,8 @@ import rehypeExternalLinks from 'rehype-external-links'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-blog-template.netlify.app',
+  site: 'https://leogao1.github.io/weihang_site/',  
+  base: '/weihang_site/',                            
   integrations: [mdx(), svelte()],
   markdown: {
     shikiConfig: {

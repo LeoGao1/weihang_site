@@ -7,8 +7,8 @@ import rehypeExternalLinks from 'rehype-external-links'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://leogao1.github.io/weihang_site/',
-  base: '/weihang_site/',
+  site: 'https://leogao1.github.io/weihang_site/',  
+  base: '/weihang_site/',                            
   integrations: [mdx(), svelte()],
   markdown: {
     shikiConfig: {
@@ -23,19 +23,5 @@ export default defineConfig({
         },
       ],
     ],
-  },
-  build: {
-    assets: '_assets',
-    format: 'directory',
-  },
-  vite: {
-    build: {
-      assetsInlineLimit: 0,
-    },
-    server: {
-      fs: {
-        strict: false,
-      },
-    },
   },
 })

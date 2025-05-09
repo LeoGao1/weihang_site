@@ -128,12 +128,14 @@ const permalink = Astro.site.href;
   font-family: var(--font-family-serif);
   font-weight: 700;
   margin-bottom: 1rem;
+  color: var(--text-main);
 }
 
 .home-copy p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
   line-height: 1.6;
+  color: var(--text-main);
 }
 
 .cta-buttons {
@@ -188,13 +190,15 @@ const permalink = Astro.site.href;
   font-size: 0.85rem;
   font-style: italic;
   text-align: left;
-  color: #777;
+  color: var(--text-secondary);
 }
 
 .skills-section, .projects-section {
   margin-top: 4em;
   padding: 2em;
-  background: #f9f9f9;
+  background: var(--background-body);
+  border-top: 1px solid rgba(125, 125, 125, 0.1);
+  border-bottom: 1px solid rgba(125, 125, 125, 0.1);
 }
 
 .skills-grid {
@@ -205,10 +209,19 @@ const permalink = Astro.site.href;
 }
 
 .skill-item {
-  background: white;
+  background: var(--background-body);
+  border: 1px solid rgba(125, 125, 125, 0.1);
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.skill-item h3 {
+  color: var(--text-main);
+}
+
+.skill-item p {
+  color: var(--text-secondary);
 }
 
 .section-title {
@@ -216,6 +229,7 @@ const permalink = Astro.site.href;
   font-weight: 700;
   text-align: center;
   margin-bottom: 2rem;
+  color: var(--text-main);
 }
 
 .project-preview-grid {
@@ -227,7 +241,8 @@ const permalink = Astro.site.href;
 }
 
 .project-preview-card {
-  background: #fff;
+  background: var(--background-body);
+  border: 1px solid rgba(125, 125, 125, 0.1);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   padding: 1.5rem;
@@ -241,42 +256,47 @@ const permalink = Astro.site.href;
   box-shadow: 0 8px 16px rgba(0,0,0,0.08);
 }
 
-.project-preview-card img {
-  width: 100%;
-  max-width: 100%;
-  max-height: 180px;   /* 限制图片高度 */
-  object-fit: cover;   /* 保持比例并裁剪溢出 */
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  background-color: #f4f4f4;
-  aspect-ratio: 16/9;
-}
-
 .project-preview-card h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 0.5rem 0;
+  color: var(--text-main);
 }
 
 .project-preview-card p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #444;
+  color: var(--text-secondary);
 }
 
 .project-preview-card a {
-  margin-top: 1rem;
-  font-weight: 600;
   color: var(--primary-color);
-  text-decoration: none;
 }
 
-.project-preview-card a:hover {
-  text-decoration: underline;
+.project-preview-card img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .projects-footer {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .home-copy h1 {
+    font-size: 2rem;
+  }
+  
+  .home-copy p {
+    font-size: 1.1rem;
+  }
+  
+  .skills-section, .projects-section {
+    padding: 1em;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+  }
 }
 </style>

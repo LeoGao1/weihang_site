@@ -50,6 +50,7 @@ const current = "publications";
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 2rem;
+    color: var(--text-main);
   }
 
   .pub-list {
@@ -58,7 +59,8 @@ const current = "publications";
   }
 
   .pub-item {
-    background: #f9f9f9;
+    background: var(--background-body);
+    border: 1px solid rgba(125, 125, 125, 0.1);
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: 10px;
@@ -68,18 +70,20 @@ const current = "publications";
   .pub-item h3 {
     margin: 0 0 0.5rem 0;
     font-size: 1.2rem;
+    color: var(--text-main);
   }
 
   .pub-item p {
     margin: 0;
     font-size: 1rem;
     line-height: 1.6;
+    color: var(--text-secondary);
   }
 
   .pub-item a {
     margin-left: 0.5rem;
     font-weight: bold;
-    color: var(--primary-color, #007acc);
+    color: var(--primary-color);
     text-decoration: none;
   }
 
@@ -90,8 +94,8 @@ const current = "publications";
 
   .btn-secondary {
     padding: 0.7em 1.4em;
-    border: 2px solid #007acc;
-    color: #007acc;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
@@ -99,7 +103,7 @@ const current = "publications";
   }
 
   .btn-secondary:hover {
-    background-color: #007acc;
+    background-color: var(--primary-color);
     color: white;
   }
 </style>

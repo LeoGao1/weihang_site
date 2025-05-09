@@ -22,13 +22,13 @@ const current = "about";
 
     <h2>🏊‍♂️ Swimming & Flow</h2>
     <p>
-      I enjoy swimming. It’s not just exercise — it’s meditation in motion. 
+      I enjoy swimming. It's not just exercise — it's meditation in motion. 
       The rhythm of breath and water lets me focus deeply and find peace in the present moment.
     </p>
 
     <h2>📚 A Lifelong Curiosity for Philosophy</h2>
     <p>
-      Since childhood, I’ve been fascinated by philosophy as a way of thinking and perceiving the world. 
+      Since childhood, I've been fascinated by philosophy as a way of thinking and perceiving the world. 
       I was first drawn to <b>Wang Yangming's school of thought</b> in middle school and deeply resonated with the idea of unity between knowing and doing. 
       In university, I explored Western and modern philosophy through electives, gaining a more structured understanding of epistemology, ethics, and existentialism.
       Philosophy continues to shape how I think and live.
@@ -37,9 +37,9 @@ const current = "about";
     <h2>🧘‍♂️ Meditation & Mental Resilience</h2>
     <p>
       Graduate school and early career life brought new forms of pressure and emotional swings. 
-      That’s when I started meditating — and stayed consistent. 
+      That's when I started meditating — and stayed consistent. 
       Meditation helps me anchor myself, calm my mind, and observe thoughts with clarity. 
-      It’s an ongoing practice, but one that constantly brings me back to balance.
+      It's an ongoing practice, but one that constantly brings me back to balance.
     </p>
 
     <h2>✨ From Curiosity to Exploration</h2>
@@ -51,7 +51,7 @@ const current = "about";
     </p>
 
     <blockquote>
-      “You must live in the present, launch yourself on every wave, find your eternity in each moment.”
+      "You must live in the present, launch yourself on every wave, find your eternity in each moment."
       <br />
       <footer>— Henry David Thoreau</footer>
     </blockquote>
@@ -66,6 +66,7 @@ const current = "about";
       align-items: center;
       justify-content: center;
       position: relative;
+      margin-top: 1rem;
     }
 
     .hero-banner .overlay {
@@ -80,6 +81,11 @@ const current = "about";
     .hero-banner h1 {
       margin: 0 0 0.5rem;
       font-size: 2.5rem;
+      color: white;
+    }
+
+    .hero-banner p {
+      color: white;
     }
 
     .about-article {
@@ -97,15 +103,15 @@ const current = "about";
 
     .about-article p {
       font-size: 1.15rem;
-      color: #333;
+      color: var(--text-main);
     }
 
     blockquote {
       margin-top: 3rem;
       font-style: italic;
       font-size: 1.2rem;
-      color: #666;
-      border-left: 4px solid #ccc;
+      color: var(--text-secondary);
+      border-left: 4px solid var(--text-secondary);
       padding-left: 1.2rem;
     }
 
@@ -116,8 +122,23 @@ const current = "about";
     }
 
     @media (max-width: 768px) {
+      .hero-banner {
+        height: auto;
+        margin-top: 2rem;
+        padding: 1rem;
+      }
+      
+      .hero-banner .overlay {
+        padding: 1rem;
+        width: 90%;
+      }
+      
       .hero-banner h1 {
-        font-size: 2rem;
+        font-size: 1.6rem;
+      }
+      
+      .hero-banner p {
+        font-size: 0.9rem;
       }
 
       .about-article p {

@@ -83,18 +83,21 @@ const current = "projects";
     margin-bottom: 3rem;
     font-size: 2.2rem;
     font-weight: 700;
+    color: var(--text-main);
   }
 
   .section-title {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     padding-left: 0.5rem;
-    border-left: 4px solid #007acc;
+    border-left: 4px solid var(--primary-color);
+    color: var(--text-main);
   }
 
   .project-card {
     display: flex;
-    background: #ffffff;
+    background: var(--background-body);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
     overflow: hidden;
@@ -124,13 +127,14 @@ const current = "projects";
     margin-bottom: 0.75rem;
     font-size: 1.25rem;
     font-weight: 600;
+    color: var(--text-main);
   }
 
   .project-card p {
     line-height: 1.6;
     font-size: 1rem;
     margin: 0;
-    color: #333;
+    color: var(--text-secondary);
   }
 
   @media (max-width: 768px) {
